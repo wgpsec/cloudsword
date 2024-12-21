@@ -203,4 +203,8 @@ XXXXXXXX
 
 <div align=center><img width="600" src="static/buy-coffee.png"></div><br>
 
+> 赞赏行为纯属自愿，旨在表达对开源软件作者或贡献者的支持和感谢，并非购买商品或服务的交易行为。赞赏者应当清楚理解，赞赏款项不享有任何商品或服务的保证，也不构成任何形式的合同关系。
+
+
+
 <div align=center><b>感谢您使用我的工具</b></div>
