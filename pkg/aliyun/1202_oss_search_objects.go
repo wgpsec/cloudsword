@@ -118,7 +118,6 @@ func OSSSearchObjects() {
 								} else {
 									fmt.Printf("自定义元数据列表：%v\n", string(jsonBytes))
 								}
-								logger.Println.Error(err.Error())
 
 								fmt.Printf("访问地址：https://%v.oss-%v.aliyuncs.com/%v\n", bucketName, region, *file.Filename)
 							}
