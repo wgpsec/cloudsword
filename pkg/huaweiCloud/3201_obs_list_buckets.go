@@ -23,9 +23,7 @@ func OBSListBuckets() {
 					fmt.Printf("区域：%v\n", b.Location)
 					fmt.Printf("访问地址：https://%v.obs.%v.myhuaweicloud.com\n", b.Name, b.Location)
 					creationDate := utils.FormatTime(&b.CreationDate)
-					if err == nil {
-						fmt.Printf("创建时间：%v\n", creationDate)
-					}
+					fmt.Printf("创建时间：%v\n", creationDate)
 					fmt.Println(strings.Repeat("=", 60))
 				}
 			}
