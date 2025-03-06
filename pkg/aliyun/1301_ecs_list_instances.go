@@ -123,7 +123,9 @@ func ECSListInstances() {
 					fmt.Printf("\n其他信息========\n")
 					fmt.Printf("删除保护：%v\n", i.DeletionProtection)
 					jsonBytes, err := json.Marshal(i.Tags.Tag)
-					logger.Println.Error(err.Error())
+					if err != nil {
+						logger.Println.Error(err.Error())
+					}
 					fmt.Printf("实例标签：%v\n", jsonBytes)
 					fmt.Printf("计费类型：%v\n", i.InstanceChargeType)
 					fmt.Printf("主机名称：%v\n", i.Hostname)
