@@ -192,7 +192,9 @@ func SurveyConfirm(message string) bool {
 		Default: true,
 	}
 	err := survey.AskOne(prompt, &bool_)
-	logger.Println.Error(err.Error())
+	if err != nil {
+		logger.Println.Error(err.Error())
+	}
 	return bool_
 }
 

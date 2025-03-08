@@ -82,8 +82,10 @@ func ECSClient(region string) (*ecs.Client, error) {
 			global.GetBasicOptionValue(global.AKSecret),
 		)
 		ecsClient, err = ecs.NewClientWithOptions(region, ecsConfig, credential)
-		logger.Println.Error("创建 ECS 客户端时报错，详细信息如下：")
-		logger.Println.Error(err.Error())
+		if err != nil {
+			logger.Println.Error("创建 ECS 客户端时报错，详细信息如下：")
+			logger.Println.Error(err.Error())
+		}
 	}
 	return ecsClient, err
 }
