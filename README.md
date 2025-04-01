@@ -51,6 +51,30 @@ brew upgrade cloudsword
 
 完整用法与介绍可以查看 [云鉴使用手册](https://wiki.teamssix.com/cloudsword)
 
+## MCP协议支持
+
+cloudsword 从v0.0.2 版本开始支持MCP协议，支持SSE以及STDIO方式
+
+使用命令 `./cloudsword sse http://localhost:8080` 即可在本地监听8080端口
+
+**SSE模式**
+
+以Chrerry stdio为例 填入 http://localhost:8080/sse 即可获得到工具信息
+
+![image-20250401193340509](./static/image-20250401193340509.png)
+
+**STDIO**
+
+![image-20250401193444375](./static/image-20250401193444375.png)
+
+**使用示例**
+
+![image-20250401194214015](./static/image-20250401194214015.png)
+
+
+
+
+
 ## 集成模块
 
 以下是云鉴目前所支持使用的模块：

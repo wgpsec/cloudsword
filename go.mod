@@ -20,6 +20,7 @@ require (
 	github.com/google/go-github/v39 v39.2.0
 	github.com/hashicorp/go-version v1.7.0
 	github.com/huaweicloud/huaweicloud-sdk-go-obs v3.24.9+incompatible
+	github.com/mark3labs/mcp-go v0.17.0
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cam v1.0.1056
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cloudaudit v1.0.1056
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cls v1.0.1056
@@ -45,6 +46,7 @@ require (
 	github.com/clbanning/mxj/v2 v2.5.5 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
@@ -66,6 +68,7 @@ require (
 	github.com/pkg/term v1.2.0-beta.2 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/tjfoc/gmsm v1.4.1 // indirect
+	github.com/yosida95/uritemplate/v3 v3.0.2 // indirect
 	golang.org/x/crypto v0.21.0 // indirect
 	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/sync v0.9.0 // indirect

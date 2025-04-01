@@ -10,8 +10,8 @@ const (
 	// 版本信息
 	Team       = "WgpSec"
 	Name       = "CloudSword"
-	Version    = "0.0.1"
-	UpdateDate = "2024.12.21"
+	Version    = "0.0.2"
+	UpdateDate = "2025.04.02"
 
 	// 云提供商
 
@@ -73,6 +73,7 @@ type Module struct {
 	Name           string
 	ModuleProvider string
 	Introduce      string
+	Desc           string
 	Level          int
 	Info           string
 	BasicOptions   []BasicOptions

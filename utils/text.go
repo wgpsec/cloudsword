@@ -55,6 +55,8 @@ func GetModule(id, level int, provider, name, moduleProvider, introduce, moreInf
 		Level:          level,
 		Info: generateDetailedInformation(id, level, getProvider(provider).Name, name, moduleProvider, introduce,
 			GenerateTable(GetBasicOptions(global.GetBasicOptionsWithId(id))), moreInfo),
+		Desc: generateMarkdownInformation(id, level, getProvider(provider).Name, name, moduleProvider, introduce,
+			moreInfo),
 		BasicOptions: global.GetBasicOptionsWithId(id),
 	}
 }
@@ -70,6 +72,29 @@ func GetBasicOptions(basicOptions []global.BasicOptions) ([]string, [][]string, 
 		}
 	}
 	return header, rows, []int{15, 8, 40, 50}
+}
+
+func generateMarkdownInformation(id, level int, provider, name, moduleProvider, introduce, moreInfo string) string {
+
+	return fmt.Sprintf(`
+# 介绍
+ID: %s
+云提供商：%s
+名称: %s
+推荐评级: %d	
+模块提供者: %s
+模块简介: %s
+# 操作
+%s
+
+`,
+		fmt.Sprintf("%d", id),
+		provider,
+		name,
+		level,
+		moduleProvider,
+		introduce,
+		moreInfo)
 }
 
 func generateDetailedInformation(id, level int, provider, name, moduleProvider, introduce, basicOptions, moreInfo string) string {
