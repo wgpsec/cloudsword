@@ -54,7 +54,7 @@ func fnModel(m global.Module) server.ToolHandlerFunc {
 	}
 }
 
-func MCPServer() {
+func MCPServer(transport string, addr string) {
 	s := server.NewMCPServer(
 		global.Name,
 		global.Version,
@@ -76,10 +76,17 @@ func MCPServer() {
 		s.AddTool(mcp.NewTool(mode.Introduce, opts...), fnModel(mode))
 	}
 
-	sseServer := server.NewSSEServer(s, server.WithBaseURL("http://localhost:8080"))
-	logger.Printf.Info("SSE server listening on :8080")
-	if err := sseServer.Start(":8080"); err != nil {
-		logger.Printf.Fatalf("Server error: %v", err)
+	if transport == "sse" {
+		port := strings.Split(addr, ":")[2]
+		sseServer := server.NewSSEServer(s, server.WithBaseURL(addr))
+		logger.Println.Infof("SSE server listening on :%s", addr)
+		if err := sseServer.Start(":" + port); err != nil {
+			logger.Println.Fatalf("Server error: %v\n", err)
+		}
+	} else {
+		if err := server.ServeStdio(s); err != nil {
+			logger.Println.Fatalf("Server error: %v\n", err)
+		}
 	}
 
 }

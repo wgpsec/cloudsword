@@ -7,9 +7,11 @@ import (
 
 func main() {
 	if len(os.Args) > 1 {
-		if os.Args[1] == "sse" {
-			cmd.MCPServer()
+		addr := "http://localhost:8080"
+		if len(os.Args) > 2 {
+			addr = os.Args[2]
 		}
+		cmd.MCPServer(os.Args[1], addr)
 	} else {
 		cmd.Run()
 	}
