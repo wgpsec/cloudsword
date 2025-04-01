@@ -73,6 +73,7 @@ type Module struct {
 	Name           string
 	ModuleProvider string
 	Introduce      string
+	Desc           string
 	Level          int
 	Info           string
 	BasicOptions   []BasicOptions
