@@ -10,8 +10,8 @@ const (
 	// 版本信息
 	Team       = "WgpSec"
 	Name       = "CloudSword"
-	Version    = "0.0.1"
-	UpdateDate = "2024.12.21"
+	Version    = "0.0.2"
+	UpdateDate = "2025.04.02"
 
 	// 云提供商
 
@@ -19,6 +19,7 @@ const (
 	TencentCloud = "tencent_cloud"
 	HuaweiCloud  = "huawei_cloud"
 	BaiduCloud   = "baidu_cloud"
+	QiniuCloud   = "qiniu_cloud"
 
 	// 基础选项
 

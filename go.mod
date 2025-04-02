@@ -21,6 +21,7 @@ require (
 	github.com/hashicorp/go-version v1.7.0
 	github.com/huaweicloud/huaweicloud-sdk-go-obs v3.24.9+incompatible
 	github.com/mark3labs/mcp-go v0.17.0
+	github.com/qiniu/go-sdk/v7 v7.25.3
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cam v1.0.1056
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cloudaudit v1.0.1056
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cls v1.0.1056
@@ -31,6 +32,8 @@ require (
 )
 
 require (
+	github.com/BurntSushi/toml v1.3.2 // indirect
+	github.com/alex-ant/gomath v0.0.0-20160516115720-89013a210a82 // indirect
 	github.com/alibabacloud-go/alibabacloud-gateway-spi v0.0.5 // indirect
 	github.com/alibabacloud-go/debug v1.0.1 // indirect
 	github.com/alibabacloud-go/endpoint-util v1.1.0 // indirect
@@ -45,6 +48,8 @@ require (
 	github.com/clbanning/mxj v1.8.4 // indirect
 	github.com/clbanning/mxj/v2 v2.5.5 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
+	github.com/gammazero/toposort v0.1.1 // indirect
+	github.com/gofrs/flock v0.8.1 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
@@ -77,4 +82,5 @@ require (
 	golang.org/x/text v0.20.0 // indirect
 	golang.org/x/time v0.4.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
+	modernc.org/fileutil v1.0.0 // indirect
 )
