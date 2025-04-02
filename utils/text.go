@@ -127,6 +127,8 @@ func getProvider(provider string) global.Provider {
 		p = global.Provider{"华为云", global.HuaweiCloud}
 	case global.BaiduCloud:
 		p = global.Provider{"百度云", global.BaiduCloud}
+	case global.QiniuCloud:
+		p = global.Provider{"七牛云", global.QiniuCloud}
 	}
 	return p
 }

@@ -19,6 +19,7 @@ const (
 	TencentCloud = "tencent_cloud"
 	HuaweiCloud  = "huawei_cloud"
 	BaiduCloud   = "baidu_cloud"
+	QiniuCloud   = "qiniu_cloud"
 
 	// 基础选项
 

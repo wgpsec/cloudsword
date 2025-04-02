@@ -6,6 +6,7 @@ import (
 	"github.com/wgpsec/cloudsword/pkg/aliyun"
 	"github.com/wgpsec/cloudsword/pkg/baiduCloud"
 	"github.com/wgpsec/cloudsword/pkg/huaweiCloud"
+	"github.com/wgpsec/cloudsword/pkg/qiniuCloud"
 	"github.com/wgpsec/cloudsword/pkg/tencentCloud"
 	"github.com/wgpsec/cloudsword/utils"
 	"github.com/wgpsec/cloudsword/utils/global"
@@ -36,6 +37,7 @@ func Modules() []global.Module {
 	modules = append(modules, tencentCloud.Modules()...)
 	modules = append(modules, huaweiCloud.Modules()...)
 	modules = append(modules, baiduCloud.Modules()...)
+	modules = append(modules, qiniuCloud.Modules()...)
 	return modules
 }
 
@@ -130,12 +132,15 @@ func runModule(m global.Module) {
 			tencentCloud.CAMCreateLoginProfile()
 		case 2406:
 			tencentCloud.CAMCreateAccessKey()
-			// 华为云
+		// 华为云
 		case 3201:
 			huaweiCloud.OBSListBuckets()
 		// 百度云
 		case 4201:
 			baiduCloud.BOSListBuckets()
+		//七牛云
+		case 5201:
+			qiniuCloud.KodoListBuckets()
 		}
 	}
 }
