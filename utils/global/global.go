@@ -5,13 +5,17 @@ import (
 	"strconv"
 )
 
+// Version information - these variables can be set at build time using ldflags
+var (
+	Version    = "dev"      // Will be set by ldflags during build
+	UpdateDate = "unknown"  // Will be set by ldflags during build
+)
+
 const (
 
 	// 版本信息
 	Team       = "WgpSec"
 	Name       = "CloudSword"
-	Version    = "0.0.2"
-	UpdateDate = "2025.04.02"
 
 	// 云提供商
 
