@@ -19,7 +19,7 @@ builds:
     ldflags:
       - -s -w
       - -X github.com/wgpsec/cloudsword/utils/global.Version={{.Version}}
-      - -X github.com/wgpsec/cloudsword/utils/global.UpdateDate={{.Date}}
+      - -X github.com/wgpsec/cloudsword/utils/global.UpdateDate={{time "2006.01.02"}}
 archives:
   - name_template: "{{ .ProjectName }}_{{ .Tag }}_{{ .Os }}_{{ .Arch }}"
     id: homebrew
